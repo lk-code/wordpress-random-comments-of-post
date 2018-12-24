@@ -35,7 +35,7 @@ namespace de.lkraemer.windowsunited.winner2018.netcorecli.Components.winner2018
 
             string url = "{0}/comments?post={1}&per_page=100";
 
-            url = string.Format(WORDPRESS_API_URL, url, postId);
+            url = string.Format(url, WORDPRESS_API_URL, postId);
 
             HttpResponseMessage response = await http.GetAsync(url);
             string content = await response.Content.ReadAsStringAsync();
